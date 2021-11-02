@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
-
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
+    /*  #402E32
+        #C1554E
+        #FFF
+        #fff
+     */
 *{
     margin: 0;
     padding: 0;
@@ -8,19 +12,26 @@
 }
 
 .max-width{
-    max-width: 1300px;
+    max-width: 1500px;
     padding: 0px 80px;
     margin: auto;
+    margin:auto 0px auto 0px;
 }
 
 
 /* navbar style */
-.navbar{
+.navbar {
     position: fixed;
     width: 100%;
-    padding: 15px;
-    background: rgb(241, 162, 14);
+    padding: 30px 0;
     font-family: 'Zen Old Mincho';
+    transition: all 0.3s ease;
+    /* background-color: #ffffff30; */
+    background: linear-gradient(#ffffffa8, #ffffff00);
+}
+.navbar.sticky{
+    background: #C1554E;
+    padding: 15px 0;
 }
 
 .navbar .max-width{
@@ -30,25 +41,218 @@
     justify-content: space-between;
 
 }
-
 .navbar .logo a{
-    color: #fff;
+    padding: 10px 0px;
+    color: #402E32;
     font-size: 35px;
     font-weight: 600;
+}
+.navbar .logo a:hover{
+    color: #C1554E ;
+}
+
+.navbar .logo a span{
+    color: #C1554E ;
+}
+
+.navbar.sticky .logo a{
+    color:#fff;
+}
+
+.navbar.sticky .logo a span{
+    color: #fff;
 }
 
 .navbar .menu li{
     list-style: none;
     display: inline-block;
+    
 }
 
 .navbar .menu li a{
-    color: #fff;
-    font-size: 18;
-    font-weight: 500;
+    color: #402E32;
+    font-size: 20px;
+    font-weight: 600;
     margin-left: 25px;
+    transition: color 0.3s ease;
+    padding: 10px 0px;
+}
+
+.navbar .menu li a:hover{
+    color: #C1554E;    
+}    
+
+.navbar.sticky .menu li a{
+    color: #fff;
+}
+
+.navbar.sticky .menu li a:hover{
+    color: #402E32;
+}
+.navbar.sticky .logo a:hover{
+    color: #402E32;
+
+}
+
+/* menu button styling */
+.menu-btn{
+    display: none;
+    position: relative;
+
+    color: #fff;
+    font: 25px ;
+    cursor: pointer;
 }
 
 
-/* home section start */
+/* home section styling */
+.home{
+    display:flex;
+    background: url("resources/yellow_wall.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: bottom;
+    height: 100vh;
+    width: 100%;
+    color:#402E32;
+    min-height: 500px;
+    font-family: 'Zen Old Mincho';
+}
 
+.home .max-width{
+    
+    padding-top: 7px; 
+    padding-bottom: 7px; 
+    background-color:  rgba(255, 255, 255, 0.45);
+    /* background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.424)); */
+}
+.home .home-content .text-1{
+    font-size: 30px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: -2px;
+}
+.home .home-content .text-3{
+    font-size: 30px;
+    
+}
+.home .home-content .text-3 span{
+    color: #C1554E ;
+    font-weight: 600;
+}
+
+.home .home-content .home-button a{
+    background-color: #402E32;
+    font-size: 30px;
+    color: #fff;
+
+    border: 2px solid #402E32;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 10px auto;
+    text-align: top;
+    padding: 2px 10px 5px 10px;
+}
+
+.home .home-content .home-button a:hover{
+    
+    background-color: #c1564e3a ;
+    color: #402E32;
+
+
+}
+
+
+/* responsive media query start */
+
+@media(max-width:823px){
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 789px){
+
+    .max-width{
+
+        padding: 0px 50px; 
+     }    
+
+     .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #C1554E
+ ;
+        right: -100%;
+        top: 0;
+        text-align: center ;
+        transition: all 0.3s ease;
+     }
+
+     .navbar .menu.active{
+        right: 0;
+    }
+
+     .navbar .menu li{
+        display: block;
+        
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+        color: #fff;
+        
+    }
+    .navbar .menu li a:hover{
+        color: #402E32;
+
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+ 
+}
+
+
+
+@media(max-width: 590px){
+
+    .max-width{
+
+        padding: 0px 20px; 
+     }    
+
+    .home .home-content .text-2{
+        font-size: 55px;
+    }
+    .home .home-content .text-3{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 500px){
+
+    .max-width{
+
+        padding: 0px 15px; 
+     }    
+
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 15px;
+    }
+}
