@@ -9,9 +9,10 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    
 }
 
-hmtl{
+html{
     scroll-behavior: smooth;
 }
 
@@ -25,6 +26,7 @@ hmtl{
 /* section styling */
 section{
     padding: 100px 0;
+    height: 90vh;
 }
 
 section .title{
@@ -37,7 +39,8 @@ section .title{
     font-family: 'Zen Old Mincho';
 } 
 
- /**/section .title::before{
+ /**/
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -215,7 +218,7 @@ section .title::after{
     background-size: cover;
     background-attachment: fixed;
     background-position-y: bottom;
-    height:100vh; 
+    /* height:100vh;  */
     width: 100%;
     color: #fff;
     min-height: 500px;
@@ -262,6 +265,37 @@ section .title::after{
 }
 
 
+/* skills section styling */
+
+.skills .skills-content{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right{
+    width: 40%;
+}
+
+.skills .skills-content .left{
+    width: 50%;
+}
+
+.skills .title::after{
+    content: "what i know";
+}
+
+.skills .skills-content .right img{
+    width: 400px;
+    height: 400px;
+    border-radius: 6px;
+}
+
+
+
+
+
 /* responsive media query start */
 
 @media(max-width:823px){
@@ -284,8 +318,7 @@ section .title::after{
         position: fixed;
         height: 100vh;
         width: 100%;
-        background: #C1554E
- ;
+        background: #C1554E;
         right: -100%;
         top: 0;
         text-align: center ;
@@ -353,3 +386,4 @@ section .title::after{
         font-size: 15px;
     }
 }
+
