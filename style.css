@@ -25,7 +25,7 @@ html{
 
 /* section styling */
 section{
-    padding: 100px 0;
+    padding: 50px 0;
     height: 90vh;
 }
 
@@ -232,7 +232,7 @@ section .title::after{
 .about .about-content{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
 }
 
@@ -245,8 +245,8 @@ section .title::after{
 }
 
 .about-content .left img{
-    width: 400px;
-    height: 400px;
+    width: 50vh;
+    height: 50vh;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -266,6 +266,14 @@ section .title::after{
 
 
 /* skills section styling */
+
+.skills{
+    background: #fff;
+    font-family: 'Zen Old Mincho';
+    height: 100vh;
+    width: 100%;
+    min-height: 500px;
+}
 
 .skills .skills-content{
     display: flex;
@@ -292,9 +300,69 @@ section .title::after{
     border-radius: 6px;
 }
 
+/* projects styling section */
+
+.projects{
+    background: #402e32;
+    color: #fff;
+    font-family: 'Zen Old Mincho';
+}
+
+.projects .max-width{
+    height: 70%;
+}
+
+.projects .title::after{
+    content: "what I have done";
+}
+
+.projects-content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 15px;
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.178);
+    
+}
+
+.box .box-title{
+    height: 20%;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 15px;
+}
+
+.box .box-details{
+    height: 80%;
+    text-align: center;
+    margin: 20px;
+}
 
 
 
+/* contact styling section */
+.contact{
+    background: #fff;
+    font-family: 'Zen Old Mincho';
+}
+
+.contact .title::after{
+    content: "Talk to me";
+}
+
+footer{
+    font-family: 'Zen Old Mincho';
+}
 
 /* responsive media query start */
 
