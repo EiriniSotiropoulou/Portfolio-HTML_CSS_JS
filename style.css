@@ -27,6 +27,7 @@ html{
 section{
     padding: 100px 0;
     height: 100vh;
+    min-height: 600px;
 }
 
 section .title{
@@ -218,10 +219,8 @@ section .title::after{
     background-size: cover;
     background-attachment: fixed;
     background-position-y: bottom;
-    /* height:100vh;  */
     width: 100%;
     color: #fff;
-    min-height: 500px;
     font-family: 'Zen Old Mincho';
 }
 
@@ -270,9 +269,7 @@ section .title::after{
 .skills{
     background: #fff;
     font-family: 'Zen Old Mincho';
-    height: 100vh;
     width: 100%;
-    min-height: 500px;
 }
 
 .skills .skills-content{
@@ -357,6 +354,7 @@ section .title::after{
 .contact{
     background: #fff;
     font-family: 'Zen Old Mincho';
+    /* min-height: 650px; */
 }
 
 .contact .title::after{
@@ -395,16 +393,20 @@ form input,textarea{
     width: 100%;
     padding: 10px;
     margin: 10px 0 ;
-
     border: 2px solid #402E32;
     border-radius: 4px;
 }
 
+form textarea{
+    width: 100%;
+    height: 100px;
+}
 
 footer{
     font-family: 'Zen Old Mincho';
     text-align: center;
-    margin-bottom: 10px;
+    margin: -0px;
+    /* margin-bottom: 10px; */
 }
 
 /* responsive media query start */
