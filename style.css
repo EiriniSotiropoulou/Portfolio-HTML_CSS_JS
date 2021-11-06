@@ -25,8 +25,8 @@ html{
 
 /* section styling */
 section{
-    padding: 50px 0;
-    height: 90vh;
+    padding: 100px 0;
+    height: 100vh;
 }
 
 section .title{
@@ -34,7 +34,7 @@ section .title{
     text-align: center;
     font-size: 40px;
     font-weight: 500;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     padding-bottom: 20px;
     font-family: 'Zen Old Mincho';
 } 
@@ -95,7 +95,7 @@ section .title::after{
     z-index: 999;
     /* background-color: #ffffff30; */
     background: linear-gradient(#ffffffa8, #ffffff00);
-}
+}   
 .navbar.sticky{
     background: #C1554E;
     padding: 15px 0;
@@ -320,7 +320,7 @@ section .title::after{
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    gap: 15px;
+    gap: 50px;
     height: 100%;
 }
 
@@ -330,13 +330,15 @@ section .title::after{
     justify-content: space-between;
     border-radius: 6px;
     background: rgba(0, 0, 0, 0.178);
+    min-height: 250px;
     
 }
 
 .box .box-title{
     height: 20%;
-    color: black;
+    color: #fff;
     text-align: center;
+    
     font-size: 30px;
     font-weight: 500;
     margin: 15px;
@@ -346,6 +348,7 @@ section .title::after{
     height: 80%;
     text-align: center;
     margin: 20px;
+    /* justify-content: center; */
 }
 
 
@@ -360,8 +363,48 @@ section .title::after{
     content: "Talk to me";
 }
 
+.contact h3{
+    text-align: center;
+}
+
+.contact .contact-details{
+    display: flex;
+    justify-content: space-between
+}
+
+.contact .contact-details .left{
+    width: 50%;
+}
+
+.contact .contact-details .left .contact-info .info .name{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.contact .contact-details .left .contact-info .info .value{
+    text-align: left;
+    
+}
+
+.contact .contact-details .right{
+    width: 50%;
+}
+
+form input,textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 ;
+
+    border: 2px solid #402E32;
+    border-radius: 4px;
+}
+
+
 footer{
     font-family: 'Zen Old Mincho';
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 /* responsive media query start */
