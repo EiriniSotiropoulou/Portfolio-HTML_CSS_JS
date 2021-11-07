@@ -27,14 +27,15 @@ html{
 section{
     padding: 100px 0;
     height: 100vh;
+    width: 100%;
 }
 
 section .title{
     position: relative;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     padding-bottom: 20px;
     font-family: 'Zen Old Mincho';
 } 
@@ -66,7 +67,7 @@ section .title::after{
 .pg-btn a{
     
     background-color: #c1564e6e;
-    font-size: 25px;
+    font-size: 35px;
     color: #402e32;
     border: 1px solid rgb(255 255 255 / 99%);
     border-radius: 6px;
@@ -94,7 +95,7 @@ section .title::after{
     transition: all 0.3s ease;
     z-index: 999;
     /* background-color: #ffffff30; */
-    background: linear-gradient(#ffffffa8, #ffffff00);
+    /* background: linear-gradient(#ffffffa8, #ffffff00); */
 }   
 .navbar.sticky{
     background: #C1554E;
@@ -194,15 +195,15 @@ section .title::after{
     /* background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.424)); */
 }
 .home .home-content .text-1{
-    font-size: 30px;
+    font-size: 50px;
 }
 .home .home-content .text-2{
-    font-size: 75px;
+    font-size: 90px;
     font-weight: 500;
     margin-left: -2px;
 }
 .home .home-content .text-3{
-    font-size: 30px;
+    font-size: 40px;
     
 }
 .home .home-content .text-3 span{
@@ -230,7 +231,7 @@ section .title::after{
 .about .about-content{
     display: flex;
     flex-wrap: wrap;
-    align-items: top;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -243,14 +244,15 @@ section .title::after{
 }
 
 .about-content .left img{
-    width: 50vh;
-    height: 50vh;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     border-radius: 6px;
+
 }
 
 .about .about-content .right .text {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -259,7 +261,9 @@ section .title::after{
 }
 
 .about .about-content .right p {
-    text-align: justify;
+    text-align: left;
+    font-size: 20px;
+    max-height: 500px;
 }
 
 
@@ -269,22 +273,43 @@ section .title::after{
     background: #fff;
     font-family: 'Zen Old Mincho';
     width: 100%;
+
 }
 
 .skills .skills-content{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.skills .skills-content .left{
+    width: 50%;
+    
+}
+
+
+.skills .skills-content .left .text{
+
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+}
+
+.skills .skills-content .left .text span{
+    color:crimson;
+}
+
+.skills .skills-content .left p{
+    font-size: 20px;
+    max-height: 300px;
 }
 
 .skills .skills-content .right{
     width: 40%;
 }
 
-.skills .skills-content .left{
-    width: 50%;
-}
 
 .skills .title::after{
     content: "what i know";
@@ -316,44 +341,47 @@ section .title::after{
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    gap: 50px;
+    /* gap: 50px; */
     
 }
 
 .projects-content a{
     color: #fff;
-    
+    height: auto;
+    height: 400px;
+    width: 300px;
 }
 
-.box {
-    height: 400px;
+.projects-content a .box {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
     border-radius: 6px;
     background: rgba(0, 0, 0, 0.178);
-
-    
+    margin: 30px;
+    padding: 20px;
 }
 
-.box:hover{
+.projects-content a .box:hover{
     background: rgba(219, 83, 83, 0.178);
 }
 
-.box .box-title{
+.projects-content a .box .box-title{
     height: 20%;
     color: #fff;
     text-align: center;
-    
     font-size: 30px;
     font-weight: 500;
-    margin: 15px;
 }
 
-.box .box-details{
+
+.projects-content a .box .box-details{
     height: 80%;
-    text-align: center;
     margin: 20px;
+    font-size: 20px;
+    text-align: center;
     /* justify-content: center; */
 }
 
@@ -363,7 +391,9 @@ section .title::after{
 .contact{
     background: #fff;
     font-family: 'Zen Old Mincho';
+    font-size: 20px;
     /* min-height: 650px; */
+    height: 95vh;
 }
 
 .contact .title::after{
@@ -371,6 +401,7 @@ section .title::after{
 }
 
 .contact h3{
+    font-size: 30px;
     text-align: center;
 }
 
@@ -384,8 +415,11 @@ section .title::after{
     width: 50%;
 }
 
+.contact .contact-details .left .contact-info .info{
+    margin: 20px;
+}
 .contact .contact-details .left .contact-info .info .name{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
     text-align: center;
 }
@@ -396,7 +430,7 @@ section .title::after{
 }
 
 .contact .contact-details .right{
-    width: 30%;
+    width: 40%;
 }
 
 
@@ -404,6 +438,8 @@ footer{
     font-family: 'Zen Old Mincho';
     text-align: center;
     margin: -0px;
+    font-weight: 600px;
+    font-size: 19px;
     /* margin-bottom: 10px; */
 }
 
