@@ -27,7 +27,6 @@ html{
 section{
     padding: 100px 0;
     height: 100vh;
-    min-height: 600px;
 }
 
 section .title{
@@ -318,17 +317,27 @@ section .title::after{
     justify-content: space-around;
     flex-wrap: nowrap;
     gap: 50px;
-    height: 100%;
+    
+}
+
+.projects-content a{
+    color: #fff;
+    
 }
 
 .box {
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 6px;
     background: rgba(0, 0, 0, 0.178);
-    min-height: 250px;
+
     
+}
+
+.box:hover{
+    background: rgba(219, 83, 83, 0.178);
 }
 
 .box .box-title{
