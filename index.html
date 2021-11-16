@@ -11,6 +11,11 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"> </script>
+    
 </head>
 <body>
     <nav class="navbar">
@@ -45,10 +50,6 @@
         </div>
     </section>
 
-    
-
-
-
     <!-- About section start -->
 
     <section class="about" id="about">
@@ -59,7 +60,7 @@
                 <div class="right">            
                     <div class="text">Lorem ipsum dolor sit<span>amet consectetur adipisicing elit.</span> </div>
                     <p> 
-                        Quis delectus oddddddddddddddddddddddddddddddddddio, aliasias  ddddddddddddddddddddddddddddio, adoloribus autem veniam, enirovident dolorem impedit sunt eum eligendi? Dolore reprehenderit laborum, laudantium veniameniam beatae adipisci, fugiat fugit praese beveniam beatae adipisci, fugiat fugit praesentium eveniet invatae adipisci, fugiat fugit praesentium eveniet inventore culpa velit.
+                        Quis delectus , aliasias  , adoloribus autem veniam, enirovident dolorem impedit sunt eum eligendi? Dolore reprehenderit laborum, laudantium veniameniam beatae adipisci, fugiat fugit praese beveniam beatae adipisci, fugiat fugit praesentium eveniet invatae adipisci, fugiat fugit praesentium eveniet inventore culpa velit.
                         Nemo 
                         
                     </p>
@@ -76,12 +77,15 @@
             <div class="skills-content">
                 <div class="left">            
                     <div class="text">My technological & creative <span>skills</span>.</div>
-                    <p> 
-                        Quis delectus odio, aliaas, provident dolorem impedit sunt eum eligendi?delectus odio, aliaas, provident doloremnt eum eligendi?delectus odio, aliaas, provident dolorem impedit sunt eum eligendi?  Dolore reprehenderit laborum, laudantium veniam beatae adipisci, fugiat fugit praesentium eveniet inventore culpa velit.
-                    </p>
+                        <p> 
+                            Quis delectus odio, aliaas, provident dolorem impedit sunt eum eligendi?delectus odio, aliaas, provident doloremnt eum eligendi?delectus odio, aliaas, provident dolorem impedit sunt eum eligendi?  Dolore reprehenderit laborum, laudantium veniam beatae adipisci, fugiat fugit praesentium eveniet inventore culpa velit.
+                        </p>
                     <div class="pg-btn"><a href="https://www.linkedin.com/in/irenesot/" target="_blank">Check my linkedin</a></div>
                     
-                </div><div class="right"></div> 
+                </div>
+                <div class="right">
+                    <canvas id="skillsChart" width="600" height="400"></canvas>
+                </div> 
                 <!-- piee -->
                 
             </div>
@@ -91,28 +95,45 @@
     <section class="projects" id="projects">
         <div class="max-width">
             <div class="title">My projects</div>
-            <div class="projects-content">
-                <a href="https://github.com/EiriniSotiropoulou" target="_blank">
-                    <div class="box">
-                        <div class="box-title">This portfolio</div>
-                        
-                        <div class="box-details">Loerem ipr sit amet consectetur adipisicing elit. Perspiciatis Loerem ipr sit amet consectetur adipisicingxxththtthth elit. Perspiciatis Loerem ipr sit amet consectetur adipisicingefefefefefeffe elit. Perspiciatis</div>
-                    </div>
-                </a>
-                <a href="https://github.com/EiriniSotiropoulou" target="_blank">
-                    <div class="box">
-                        <div class="box-title">Computational</div>
-                        
-                        <div class="box-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis digniss</div>
-                    </div>
-                </a>
-                <a href="https://github.com/EiriniSotiropoulou" target="_blank">
-                    <div class="box">
-                        <div class="box-title">Thesis</div>
-                        
-                        <div class="box-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis digniss</div>
-                    </div>
-                </a>
+            <div class="projects-content gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                
+                <div class="box gallery-cell">
+                    <a href="https://github.com/EiriniSotiropoulou" target="_blank"><span></span></a>
+                    <div class="box-title">This portfolio</div>
+                    
+                    <div class="box-details">Loerem ipr sit amet consectetur adipisicing elit. Perspiciatis Loer</div>
+                </div>
+            
+            
+                <div class="box gallery-cell">
+                    <a href="https://github.com/EiriniSotiropoulou" target="_blank"><span></span></a>
+                    <div class="box-title">Computational</div>
+                    
+                    <div class="box-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis digniss</div>
+                </div>
+            
+            
+                <div class="box gallery-cell">
+                    <a href="https://github.com/EiriniSotiropoulou" target="_blank"><span></span></a>
+                    <div class="box-title">Thesis</div>
+                    
+                    <div class="box-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis digniss</div>
+                </div>
+
+                <div class="box gallery-cell">
+                    <a href="https://github.com/EiriniSotiropoulou" target="_blank"><span></span></a>
+                    <div class="box-title">Thesis</div>
+                    
+                    <div class="box-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis digniss</div>
+                </div>
+
+                <div class="box gallery-cell">
+                    <a href="https://github.com/EiriniSotiropoulou" target="_blank"><span></span></a>
+                    <div class="box-title">Thesis</div>
+                    
+                    <div class="box-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis digniss</div>
+                </div>
+                
 
             </div>
         </div>
@@ -159,8 +180,6 @@
     <footer>
         <div class="copyright">Created By Eirini Sotiropoulou | © 2021 All rights reserved.</div>
     </footer>
-
-
 
 <script src="script.js"></script>
 

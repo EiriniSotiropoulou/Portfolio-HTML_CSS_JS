@@ -12,6 +12,10 @@
     
 }
 
+
+
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -25,10 +29,11 @@ html{
 
 /* section styling */
 section{
+    
     padding: 100px 0;
-    height: 100vh;
-    width: 100%;
+
 }
+
 
 section .title{
     position: relative;
@@ -185,6 +190,7 @@ section .title::after{
     color:#402E32;
     min-height: 500px;
     font-family: 'Zen Old Mincho';
+    transition: all 0.3s ease;
 }
 
 .home .max-width{
@@ -236,16 +242,18 @@ section .title::after{
 }
 
 .about-content .right{
+
     width: 45%;
 }
 
 .about-content .left{
+   
     width: 55%;
 }
 
 .about-content .left img{
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     object-fit: cover;
     border-radius: 6px;
 
@@ -303,7 +311,7 @@ section .title::after{
 
 .skills .skills-content .left p{
     font-size: 20px;
-    max-height: 300px;
+    max-height: 348px;
 }
 
 .skills .skills-content .right{
@@ -323,52 +331,91 @@ section .title::after{
 
 /* projects styling section */
 
+.flickity-page-dots .dot {
+    /* display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px; */
+    background: rgb(255, 255, 255) !important;
+    /* border-radius: 50%;
+    filter: alpha(opacity=25); 
+    opacity: 0.25;
+    cursor: pointer; */
+  }
+
+
+
 .projects{
     background: #402e32;
     color: #fff;
     font-family: 'Zen Old Mincho';
 }
 
-.projects .max-width{
-    height: 70%;
-}
-
 .projects .title::after{
     content: "what I have done";
 }
 
-.projects-content{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    /* gap: 50px; */
-    
-}
 
 .projects-content a{
     color: #fff;
-    height: auto;
-    height: 400px;
-    width: 300px;
+    width: 30%;
 }
 
-.projects-content a .box {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.projects-content .box{
+    position: relative;
+    width: calc(30% - 20px);
+    height: 300px !important;
+    background: #222;
+    text-align: center;
     border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    margin: 0 20px;
+    /* transition: all .3s ease; */
+
+    /* display: flex;
+    flex-direction: column;
+    gap: 10px; */
     background: rgba(0, 0, 0, 0.178);
-    margin: 30px;
-    padding: 20px;
+
 }
 
-.projects-content a .box:hover{
+
+
+/* .projects-content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} */
+
+
+
+
+
+
+.projects-content .box a span{
+    
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    border-radius: 6px;
+    z-index: 1;
+    
+    /* fixes overlap error in IE7/8, 
+        make sure you have an empty gif */
+        background: rgba(0, 0, 0, 0.178);
+        
+    }
+
+
+
+.projects-content .box:hover{
     background: rgba(219, 83, 83, 0.178);
 }
 
-.projects-content a .box .box-title{
+.projects-content .box .box-title{
     height: 20%;
     color: #fff;
     text-align: center;
@@ -377,7 +424,7 @@ section .title::after{
 }
 
 
-.projects-content a .box .box-details{
+.projects-content .box .box-details{
     height: 80%;
     margin: 20px;
     font-size: 20px;
@@ -386,14 +433,13 @@ section .title::after{
 }
 
 
-
 /* contact styling section */
 .contact{
     background: #fff;
     font-family: 'Zen Old Mincho';
     font-size: 20px;
     /* min-height: 650px; */
-    height: 95vh;
+    /* height: 95vh; */
 }
 
 .contact .title::after{
@@ -407,13 +453,16 @@ section .title::after{
 
 .contact .contact-details{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;    
+    flex-wrap: wrap;
+    
 }
 
-.contact .contact-details .left{
+.contact .contact-details .right,.left{
     width: 50%;
 }
+
 
 .contact .contact-details .left .contact-info .info{
     margin: 20px;
@@ -430,8 +479,9 @@ section .title::after{
 }
 
 .contact .contact-details .right{
-    width: 40%;
+    text-align: center;
 }
+
 
 
 footer{
@@ -444,24 +494,28 @@ footer{
 }
 
 /* responsive media query start */
-
-@media(max-width:823px){
-    .home .home-content .text-2{
-        font-size: 60px;
+/* @media(max-width:1260px){
+    .about-content .left img{
+        width: 400px;
+        height: 400px;
+    
     }
-    .home .home-content .text-3{
-        font-size: 25px;
+} */
+
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
     }
 }
 
-@media(max-width: 789px){
-
+@media(max-width:947px){
+    
     .max-width{
+        padding: 0 50px;
+    }
 
-        padding: 0px 50px; 
-     }    
-
-     .navbar .menu{
+    .navbar .menu{
         position: fixed;
         height: 100vh;
         width: 100%;
@@ -499,38 +553,163 @@ footer{
     .menu-btn i.active::before{
         content: "\f00d";
     }
- 
+
+    .home .max-width{
+        width: 100%;
+    }
+
+
+    .about .about-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between; */
+    }
+
+    .about-content .left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about-content .right{
+        width: 100%;
+        flex: 100%;
+    }
+
+
+    .about-content .left img{
+        /* width: 350px;
+        height: 350px; */
+    }
+
+    
+
+    .about-content .right .text {
+        /* width: 366px;
+        height: 100px; */
+        text-align: center;
+
+    }
+
+    .about-content .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .about-content .right p {
+        /* width: 366px;
+        height: 100px; */
+        text-align: justify;
+
+    }
+
+    .pg-btn{
+        margin-bottom: auto;
+    }
+
+    .pg-btn a{
+        margin-bottom: 20px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    
+    .projects-content{
+        /* flex-wrap: wrap; */
+
+        
+    }
+
+    .projects .projects-content .box{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .left,
+    .skills .skills-content .right,
+    .contact .contact-content .left,
+    .contact .contact-content .right{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .skills .skills-content .left .text {
+        text-align: center;
+    }
+
+
 }
 
-
-
-@media(max-width: 590px){
-
+@media (max-width: 690px) {
     .max-width{
-
-        padding: 0px 20px; 
-     }    
-
+        padding: 0 23px;
+    }
     .home .home-content .text-2{
-        font-size: 55px;
+        font-size: 60px;
     }
     .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
         font-size: 20px;
+    }
+    .projects .projects-content .box{
+        width: 100%;
+    }
+
+    .contact .contact-details .right, .left {
+        width: 100%;
+        /* text-align: center;
+        margin: 20px 5px; */
     }
 }
 
-@media(max-width: 500px){
 
-    .max-width{
-
-        padding: 0px 15px; 
-     }    
-
+@media (max-width: 500px) {
     .home .home-content .text-2{
         font-size: 50px;
     }
     .home .home-content .text-3{
-        font-size: 15px;
+        font-size: 27px;
     }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    /* .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    } 
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }*/
+}
+
+@media (max-width: 370px){
+    .pg-btn a {
+        font-size: 28px;
+    }
+
+
+    .projects .title::after {
+        bottom: -37px;
+    }
+    
 }
 
