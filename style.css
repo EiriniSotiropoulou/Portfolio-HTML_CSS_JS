@@ -436,15 +436,16 @@ section .title::after {
 }
 
 .contact .contact-details {
-  display: flex;
+  /* display: flex; */
   /* justify-content: space-between; */
   align-items: center;
   flex-wrap: wrap;
 }
 
-.contact .contact-details .right,
-.left {
-  width: 50%;
+.contact .contact-details .right {
+  margin-bottom: 35px;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .contact .contact-details .left .contact-info .info {
