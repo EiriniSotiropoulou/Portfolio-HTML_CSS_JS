@@ -38,11 +38,11 @@ var skillsCanvas = document.getElementById("skillsChart");
 // Chart.defaults.global.defaultFontSize = 18;
 
 var skillData = {
-  labels: ["HTML", "Javascript", "CSS", "Java", "MS Server"],
+  labels: ["HTML", "Javascript", "CSS", "Java", "MS Server","SQL"],
   datasets: [
     {
-      data: [30, 20, 30, 40, 40],
-      backgroundColor: ["#FF6384", "#63FF84", "#84FF63", "#8463FF", "#6384FF"],
+      data: [30, 20, 30, 30, 20,30],
+      backgroundColor: ["rgb(71, 7, 245)", "rgb(245, 177, 7)", "rgb(110, 26, 6)", "rgb(5, 98, 70)", "#6384FF","rgb(60, 3, 83)"],
     },
   ],
 };
@@ -50,4 +50,14 @@ var skillData = {
 var pieChart = new Chart(skillsCanvas, {
   type: "pie",
   data: skillData,
+  options: {
+    // This chart will not respond to mousemove, etc
+    events: [null],
+    plugins: {
+      legend: {
+          display: true,
+          position:"left"
+      }
+  }
+  }
 });
