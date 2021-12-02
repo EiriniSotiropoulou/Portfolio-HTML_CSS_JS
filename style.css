@@ -136,14 +136,13 @@ section .title::after {
   font-weight: 900;
 }
 .navbar .logo:hover {
-   /* color: rgb(1, 86, 143);
+  /* color: rgb(1, 86, 143);
   transform: scale(1.03); */
 }
 
 .navbar .logo a:hover {
   /* color: rgb(255, 255, 255); */
 }
-
 
 .navbar .logo a span {
   color: rgb(0, 0, 0);
@@ -188,7 +187,6 @@ section .title::after {
 
 .navbar.sticky .menu li a:hover {
   color: rgb(0, 0, 0);
-
 }
 .navbar.sticky .logo a:hover {
   /* color: rgb(1, 86, 143); */
@@ -302,7 +300,10 @@ section .title::after {
 }
 
 .about-content .left {
+  display: flex;
+  /* flex-direction: column; */
   width: 55%;
+  justify-content: center;
 }
 
 .about-content .left img {
@@ -317,7 +318,6 @@ section .title::after {
   font-weight: 600;
   margin-bottom: 10px;
 }
-
 
 .about .about-content .right p {
   text-align: left;
@@ -349,7 +349,6 @@ section .title::after {
   font-weight: 600;
   margin-bottom: 10px;
 }
-
 
 .skills .skills-content .left p {
   font-size: 20px;
@@ -481,6 +480,10 @@ section .title::after {
   font-size: 20px;
   /* min-height: 650px; */
   /* height: 95vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact .title::after {
@@ -493,16 +496,22 @@ section .title::after {
 }
 
 .contact .contact-details {
-  /* display: flex; */
+  display: flex;
   /* justify-content: space-between; */
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .contact .contact-details .right {
   margin-bottom: 35px;
   font-size: 25px;
   font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact .contact-details .left .contact-info .info {
@@ -586,9 +595,9 @@ footer .copyright {
 }
 @media (max-width: 1104px) {
   .about .about-content .left img {
-    height: 350px;
-    width: 350px;
-  }
+    height: 274px;
+    /* width: 350px; */
+}
 }
 
 @media (max-width: 947px) {
@@ -737,7 +746,7 @@ footer .copyright {
   .skills .skills-content .right {
     display: flex;
     flex-direction: column;
-}
+  }
 
   .skills .skills-content .right .cont {
     width: 70%;
@@ -747,9 +756,7 @@ footer .copyright {
     /* left: 50%; */
     /* bottom: 0; */
     transform: translateX(-10%);
-}
-
-
+  }
 }
 
 @media (max-width: 690px) {
