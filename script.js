@@ -13,12 +13,6 @@ $(document).ready(function () {
     }
   });
 
-  // toggle menu/navbar script
-
-  $(".menu-btn").click(function () {
-    $(".navbar .menu").toggleClass("active");
-    $(".menu-btn i").toggleClass("active");
-  });
 
   // slide-up script
   $(".scroll-up-btn").click(function () {
@@ -30,6 +24,20 @@ $(document).ready(function () {
     // applying again smooth scroll on menu items click
     $("html").css("scrollBehavior", "smooth");
   });
+
+    // toggle menu/navbar script
+    $('.menu-btn').click(function(){
+      $('.navbar .menu').toggleClass("active");
+      $('.menu-btn i').toggleClass("active");
+  });
+
+  $('.menu').click(function(){
+    $('.active').toggleClass("active");
+    $('.active .menu-btn i').toggleClass("active");
+  });
+
+
+
 });
 
 var skillsCanvas = document.getElementById("skillsChart");
@@ -59,5 +67,8 @@ var pieChart = new Chart(skillsCanvas, {
           position:"left"
       }
   }
-  }
+  },
+  // onresize(this,size){
+  //   this.radius="50%"
+  // }
 });

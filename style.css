@@ -38,7 +38,6 @@ html {
   background: #555;
 }
 
-
 /* section styling */
 section {
   padding: 100px 0;
@@ -62,7 +61,7 @@ section .title {
   left: 50%;
   width: 50%;
   height: 2px;
-  background: #fbe892  ;
+  background: #fbe892;
   transform: translateX(-50%);
   /* display: none; */
 }
@@ -78,7 +77,6 @@ section .title {
   transform: translateX(-50%);
   /* display: none; */
 }
-
 
 section .title::after {
   position: absolute;
@@ -122,7 +120,7 @@ section .title::after {
   /* background: #ffffff46; */
 }
 .navbar.sticky {
-  background: #fbe892/*#ecc206 rgb(49, 3, 12)*/;
+  background: #fbe892 /*#ecc206 rgb(49, 3, 12)*/;
   padding: 12px 0;
 }
 
@@ -137,9 +135,15 @@ section .title::after {
   font-size: 50px;
   font-weight: 900;
 }
-.navbar .logo a:hover {
-  color: rgb(194, 119, 90);;
+.navbar .logo:hover {
+   /* color: rgb(1, 86, 143);
+  transform: scale(1.03); */
 }
+
+.navbar .logo a:hover {
+  /* color: rgb(255, 255, 255); */
+}
+
 
 .navbar .logo a span {
   color: rgb(0, 0, 0);
@@ -156,7 +160,6 @@ section .title::after {
 .navbar .menu li {
   list-style: none;
   display: inline-block;
-
 }
 
 .navbar .menu li a {
@@ -170,15 +173,13 @@ section .title::after {
   border-radius: 6px;
 }
 
-.navbar .menu li:hover{
+.navbar .menu li:hover {
   /* transform: scale(1.05); */
 }
-
 
 .navbar .menu li a:hover {
   /* color: rgb(240, 236, 226); */
   background: #74642062;
-  
 }
 
 .navbar.sticky .menu li a {
@@ -186,12 +187,12 @@ section .title::after {
 }
 
 .navbar.sticky .menu li a:hover {
-  color: rgb(240, 236, 226);  
-  COLOR:rgb(245, 177, 7);
-  COLOR:rgb(60, 3, 83);
+  color: rgb(0, 0, 0);
+
 }
 .navbar.sticky .logo a:hover {
-  color: rgb(194, 119, 90);
+  /* color: rgb(1, 86, 143); */
+  /* scale(1.05); */
 }
 
 /* menu button styling */
@@ -199,7 +200,7 @@ section .title::after {
   display: none;
   position: relative;
 
-  color: #fff;
+  color: rgb(0, 0, 0);
   font: 25px;
   cursor: pointer;
 }
@@ -218,6 +219,7 @@ section .title::after {
   font-size: 30px;
   border-radius: 6px;
   border-bottom-width: 2px;
+  border: rgba(0, 0, 0, 0.287) 2px solid;
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
@@ -232,9 +234,8 @@ section .title::after {
   filter: brightness(90%);
 }
 
-.scroll-up-btn i{
+.scroll-up-btn i {
   color: #000000;
-
 }
 
 /* home section styling */
@@ -270,7 +271,7 @@ section .title::after {
   font-size: 40px;
 }
 .home .home-content .text-3 span {
-  color: rgb(194, 119, 90);
+  /* color: rgb(1, 86, 143); */
   font-weight: 600;
 }
 
@@ -316,9 +317,7 @@ section .title::after {
   font-weight: 600;
   margin-bottom: 10px;
 }
-.about .about-content .right .text span {
-  color: rgb(194, 119, 90);
-}
+
 
 .about .about-content .right p {
   text-align: left;
@@ -351,9 +350,6 @@ section .title::after {
   margin-bottom: 10px;
 }
 
-.skills .skills-content .left .text span {
-  color: rgb(194, 119, 90);
-}
 
 .skills .skills-content .left p {
   font-size: 20px;
@@ -538,11 +534,12 @@ footer {
 }
 
 footer .copyright {
+  width: 100%;
   position: absolute;
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 900;
 }
 
@@ -554,7 +551,39 @@ footer .copyright {
     
     }
 } */
+@media (max-width: 1386px) {
+  .projects-content .box .box-title {
+    font-size: 25px;
+  }
+  .projects-content .box .box-details {
+    font-size: 20px;
+  }
+  .projects-content .box {
+    padding: 37px 16px;
+    margin: 0 14px;
+  }
+}
+@media (max-width: 1206px) {
+  .navbar .menu li a {
+    padding: 10px 5px;
+    margin: 1px;
+  }
 
+  footer .copyright {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .projects-content .box .box-title {
+    font-size: 20px;
+  }
+  .projects-content .box .box-details {
+    font-size: 16px;
+  }
+}
 @media (max-width: 1104px) {
   .about .about-content .left img {
     height: 350px;
@@ -564,14 +593,23 @@ footer .copyright {
 
 @media (max-width: 947px) {
   .max-width {
-    padding: 0 50px;
+    padding: 0 20px;
+  }
+
+  footer .copyright {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: 900;
   }
 
   .navbar .menu {
     position: fixed;
     height: 100vh;
     width: 100%;
-    background: rgb(49, 3, 12);
+    background: #fbe892;
     right: -100%;
     top: 0;
     text-align: center;
@@ -582,16 +620,17 @@ footer .copyright {
     right: 0;
   }
 
-  .navbar .menu li {
+  .navbar .menu.active li {
     display: block;
   }
-  .navbar .menu li a {
+  .navbar .menu.active li a {
     display: inline-block;
     margin: 20px 0;
+    /* padding: 50px; */
     font-size: 25px;
-    color: #fff;
+    color: rgb(0, 0, 0);
   }
-  .navbar .menu li a:hover {
+  .navbar .menu.active li a:hover {
     color: rgb(44, 3, 3);
   }
   .menu-btn {
@@ -682,6 +721,35 @@ footer .copyright {
   .skills .skills-content .left .text {
     text-align: center;
   }
+  .about .about-content .right p {
+    text-align: left;
+    font-size: 20px;
+    max-height: 500px;
+    text-align: center;
+  }
+
+  .skills .skills-content .left p {
+    font-size: 20px;
+    max-height: 348px;
+    text-align: center;
+  }
+
+  .skills .skills-content .right {
+    display: flex;
+    flex-direction: column;
+}
+
+  .skills .skills-content .right .cont {
+    width: 70%;
+    height: 20%;
+    align-self: center;
+    /* position: absolute; */
+    /* left: 50%; */
+    /* bottom: 0; */
+    transform: translateX(-10%);
+}
+
+
 }
 
 @media (max-width: 690px) {
@@ -707,6 +775,15 @@ footer .copyright {
     /* text-align: center;
         margin: 20px 5px; */
   }
+
+  footer .copyright {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 900;
+  }
 }
 
 @media (max-width: 500px) {
@@ -721,6 +798,8 @@ footer .copyright {
     font-size: 19px;
   }
   /* .contact .right form .fields{
+
+
         flex-direction: column;
     }
     .contact .right form .name,
@@ -738,6 +817,19 @@ footer .copyright {
         font-size: 23px;
         line-height: 38px;
     }*/
+
+  .pg-btn a {
+    font-size: 30px;
+  }
+
+  footer .copyright {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8px;
+    font-weight: 900;
+  }
 }
 
 @media (max-width: 370px) {
@@ -747,5 +839,17 @@ footer .copyright {
 
   .projects .title::after {
     bottom: -37px;
+  }
+  .pg-btn a {
+    font-size: 25px;
+  }
+
+  footer .copyright {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 7px;
+    font-weight: 900;
   }
 }
